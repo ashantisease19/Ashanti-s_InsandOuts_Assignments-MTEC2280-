@@ -40,6 +40,7 @@ void draw() {
     g = random(0, 225);
     image(hand, (width/2)-50, height/2, 500, 300);
     image(raccoon, width/2, fall);
+    raccoon.resize(100,100);
  
     if (fall < height/2) {
       fall++; 
