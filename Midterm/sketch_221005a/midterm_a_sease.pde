@@ -1,10 +1,12 @@
-//Got help from Johnny Dunn Blinking Stars: https://openprocessing.org/sketch/165593/
+//STARS from Johnny Dunn- Blinking Stars: https://openprocessing.org/sketch/165593/
 
 int stars = 100;
 float xPosition = random(1000, 1000);
 float yPosition = random(1000, 1000);
 float xSpeed = random(-1,1);
 float ySpeed = random(-1,1);
+
+
 
 void setup() {
   background(0);
