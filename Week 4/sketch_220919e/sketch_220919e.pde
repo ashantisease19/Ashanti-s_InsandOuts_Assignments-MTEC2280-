@@ -1,16 +1,18 @@
 void setup() {
   size(700,700);
-  ellipseMode(CENTER); 
+  rectMode(CENTER); 
 }
+
 void draw() {
-  background(0);
+  background(255);
   for (int i = 1; i <= 10; i++){
     println(i);
   }
   
   for (int i = width; i >= 0; i-=50){
     //rect(x, y, width, height)
-     ellipse(mouseX, mouseY, i, i); 
-     strokeWeight(19);
+    rect(width/2, height/2, i , i);
   }
 }
+
+    
