@@ -18,7 +18,6 @@ void setup() {
       ellipse(random(width), random(height), 3, 3);
   }
   loop();
-  
   earth1 = loadImage("1earth.png");
 }
   //Used Processing Star Example: https://processing.org/examples/star.html
@@ -28,7 +27,7 @@ void draw() {
     for (int i = 300; i <= stars; i += random(100, 100)); {
         ellipse(random(width), random(height), 3, 3);
     }
-    image(earth1, 0, 0);
+   image(earth1, 0, 0);
 } 
 
 void keyPressed() {
