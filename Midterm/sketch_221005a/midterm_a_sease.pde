@@ -1,4 +1,9 @@
-//STARS from Johnny Dunn- Blinking Stars: https://openprocessing.org/sketch/165593/
+//OUR GLOBE by Ashanti Sease
+//For this project, I just wanted to show the different timezones through Processing.
+//Keys 5-0 help show different timezones through zooming into certain countries. 
+//And mousePressed helps in moving the globe around. 
+
+//STARS from Johnny Dunn- Blinking Stars: https://openprocessing.org/sketch/165593
   
 int stars = 50;
 float xPosition = random(1000, 1000);
@@ -23,9 +28,9 @@ void timeZones() {
   int s = second();
   int m = minute();
   int h = hour(); 
-  print(mon + "/" + d + "/" + y +" " +  h + ":" + m + ":" + s);
+  String t = (mon + "/" + d + "/" + y +" " +  h + ":" + m + ":" + s);
+  text(t, 40, 40, 280, 320); 
   textSize(36);
-  textAlign(CENTER, BOTTOM);
   fill(255);
 }
 
@@ -48,7 +53,8 @@ void keyPressed(){
     imageMode(CENTER);
     image(australia_Perth, 600, 350, 400, 400); 
     delay(10);
-    print("A zone of time near Perth is AWT and its +12 hours ahead of us.");
+    String au = ("A zone of time near Perth is AWT and its +12 hours ahead of us.");
+    text(au, 40, 40, 280, 320); 
     textSize(36);
     textAlign(CENTER, BOTTOM);
     fill(255);
@@ -58,7 +64,8 @@ void keyPressed(){
     imageMode(CENTER);
     image(asia_bangkok, 500, 500, mouseX, mouseY); 
     delay(10);
-    print("A zone of time near Bangkok is ICT and its +11 hours ahead of us.");
+    String as = ("A zone of time near Bangkok is ICT and its +11 hours ahead of us.");
+    text(as, 40, 40, 280, 320); 
     textSize(36);
     textAlign(CENTER, BOTTOM);
     fill(255);
@@ -66,8 +73,9 @@ void keyPressed(){
     india_bengaluru = loadImage("india_zoom.png");
     imageMode(CENTER);
     image(india_bengaluru, 500, 500, mouseX, mouseY); 
-    print("A zone of time near Bengaluru is IST and its +9 hours ahead of us.");
+    String i = ("A zone of time near Bengaluru is IST and its +9 hours ahead of us.");
     textSize(36);
+    text(i, 40, 40, 280, 320); 
     textAlign(CENTER, BOTTOM);
     fill(255);
   }  if (key == '7') {
@@ -75,7 +83,8 @@ void keyPressed(){
     imageMode(CENTER);
     image(africa_mogadishu, 500, 500, mouseX, mouseY); 
     delay(10);
-    print("A zone of time near Mogadishu is EAT and its +7  hours ahead of us.");
+    String a = ("A zone of time near Mogadishu is EAT and its +7  hours ahead of us.");
+    text(a, 40, 40, 280, 320); 
     textSize(36);
     textAlign(CENTER, BOTTOM);
     fill(255);
@@ -84,7 +93,8 @@ void keyPressed(){
     southamer_bogota = loadImage("sa_zoom.pmg");
     imageMode(CENTER);
     image(southamer_bogota, 500, 500, 700, 700); 
-    print("A zone of time near Bogota is COT and its -1 hour behind of us.");
+    String s = ("A zone of time near Bogota is COT and its -1 hour behind of us.");
+    text(s, 40, 40, 280, 320); 
     textSize(36);
     textAlign(CENTER, BOTTOM);
   }
@@ -92,8 +102,9 @@ void keyPressed(){
     northamer_montre = loadImage("na_zoom.png");
     imageMode(CENTER);
     image(northamer_montre, 500, 500, 700, 700); 
-    print("A zone of time near Montreal is EST and its not ahead or behind us.");
+    String n = ("A zone of time near Montreal is EST and its not ahead or behind us.");
     textSize(36);
+    text(n, 40, 40, 280, 320); 
     textAlign(CENTER, BOTTOM);
     fill(255);
   } 
