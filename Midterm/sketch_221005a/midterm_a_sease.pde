@@ -31,7 +31,7 @@ void timeZones() {
   int m = minute();
   int h = hour(); 
   String t = (mon + "/" + d + "/" + y +" " +  h + ":" + m + ":" + s);
-  text(t, 40, 40, 280, 320); 
+  text(t, 40, 40, 320); 
   textSize(36);
    
   fill(opacity);
@@ -57,13 +57,12 @@ void keyPressed(){
     noLoop();
   }
   if (key == '0') {
-    showImage = !showImage;
     australia_Perth = loadImage("1earth_zoom.png");
     imageMode(CENTER);
     image(australia_Perth, 600, 350, 400, 400); 
     delay(10);
     String au = ("A zone of time near Perth is AWT and its +12 hours ahead of us.");
-    text(au, 40, 40, 280, 320); 
+    text(au, 40, 320); 
     textSize(36);
     textAlign(CENTER, BOTTOM);
     fill(255);
@@ -74,26 +73,28 @@ void keyPressed(){
     image(asia_bangkok, 500, 500, mouseX, mouseY); 
     delay(10);
     String as = ("A zone of time near Bangkok is ICT and its +11 hours ahead of us.");
-    text(as, 40, 40, 280, 320); 
+    text(as, 40, 320); 
     textSize(36);
     textAlign(CENTER, BOTTOM);
     fill(255);
-  } if (key == '8') {
+  } 
+  if (key == '8') {
     india_bengaluru = loadImage("india_zoom.png");
     imageMode(CENTER);
     image(india_bengaluru, 500, 500, mouseX, mouseY); 
     String i = ("A zone of time near Bengaluru is IST and its +9 hours ahead of us.");
     textSize(36);
-    text(i, 40, 40, 280, 320); 
+    text(i, 40, 320); 
     textAlign(CENTER, BOTTOM);
     fill(255);
-  }  if (key == '7') {
+  }  
+  if (key == '7') {
     africa_mogadishu = loadImage("africa_zoom.png");
     imageMode(CENTER);
     image(africa_mogadishu, 500, 500, mouseX, mouseY); 
     delay(10);
     String a = ("A zone of time near Mogadishu is EAT and its +7  hours ahead of us.");
-    text(a, 40, 40, 280, 320); 
+    text(a, 40, 320); 
     textSize(36);
     textAlign(CENTER, BOTTOM);
     fill(255);
