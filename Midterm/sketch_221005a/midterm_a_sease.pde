@@ -10,6 +10,8 @@ float xPosition = random(1000, 1000);
 float yPosition = random(1000, 1000);
 float xSpeed = random(-1,1);
 float ySpeed = random(-1,1);
+float opacity = 0;
+float fade = 1;
 //Earth images
 boolean showImage = true;
 PImage earth1;
@@ -31,7 +33,14 @@ void timeZones() {
   String t = (mon + "/" + d + "/" + y +" " +  h + ":" + m + ":" + s);
   text(t, 40, 40, 280, 320); 
   textSize(36);
-  fill(255);
+   
+  fill(opacity);
+  
+  opacity = opacity + fade;
+  
+  if (opacity > 255 || opacity < 0){
+    fade = - fade;
+  }
 }
 
 void setup() {
