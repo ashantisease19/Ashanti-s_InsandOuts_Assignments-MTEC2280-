@@ -18,38 +18,45 @@ SoundFile spideySound1;
 SoundFile spideySound2;
 
 void setup() {
-  background(255);
   size(700, 700);
-  
+  background(255);
+ 
   String[] portList = Serial.list();
   printArray(portList);
-  String portName = Serial.list()[];
+  String portName = Serial.list()[0];
   myPort = new Serial(this, portName, 9600);
   
 }
-void keyPressed() {
-   if (key == 'A') {
-     honeybee = loadImage();
-     String a = ("Press the button :)");
-     
-     val = int(map(mouseX, 0, width, 0, 255));
-     myPort.write(val);
-   }
-}
+
 void draw() {
-  spiderWeb = loadImage();
-  if (myPort.avaliable() > 0) {
+   spiderWeb = loadImage("export.png");
+   imageMode(CENTER);
+   image(spiderWeb, 360, 360, 700, 600);
+  
+  if (myPort.available() > 0) {
     legSensorValue = myPort.read();
     val = myPort.read();
   }
   if (legSensorValue > 50) {
-    warning = loadImage();
-    spideySound2 = new SoundFile(this, "");
+    warning = loadImage("TOO CLOSE! BACK UP!.png");
+    spideySound2 = new SoundFile(this, "enderman2_.mp3");
     spideySound2.play();
   }
+  
+  if (keyPressed = true) {
+     honeybee = loadImage("honeybee.png");
+     imageMode(CENTER); 
+     String a = ("Press the button :)");
+     text(a, 40, 320); 
+     textSize(96);
+     textAlign(CENTER, BOTTOM);
+     fill(0);
+  }
+     val = int(map(mouseX, 0, width, 0, 255));
+     myPort.write(val);
    
-  if (mousePressed == true) {
-    spideySound1 = new SoundFile(this, "");
+  if (mousePressed == true){
+    spideySound1 = new SoundFile(this, "enderman1_.mp3");
     spideySound1.play();
   }    
 }
