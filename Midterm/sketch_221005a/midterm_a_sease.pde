@@ -52,6 +52,7 @@ void setup() {
       ellipse(random(width), random(height), 3, 3);
   }
 }
+
 void keyPressed(){ 
   if (key == RIGHT) {
     noLoop();
